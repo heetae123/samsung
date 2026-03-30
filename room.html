@@ -24,7 +24,6 @@
       </a>
       <nav class="gnb">
         <ul>
-          <li><a href="index.html">HOME</a></li>
           <li><a href="contact.html">회사소개</a></li>
           <li><a href="room.html" class="active">객실관리시스템</a></li>
           <li><a href="cctv.html">CCTV시스템</a></li>
@@ -45,7 +44,7 @@
   <div class="sub-header">
     <div class="sub-header-content">
       <h1>객실관리시스템</h1>
-      <div class="breadcrumb">HOME > 객실관리시스템</div>
+      <div class="breadcrumb">객실관리시스템</div>
     </div>
   </div>
 
@@ -96,13 +95,50 @@
     <section class="sub-content">
       <h3 style="margin-bottom:20px; font-size:24px; color:var(--text-dark); border-bottom: 2px solid var(--primary); padding-bottom: 10px; display: inline-block;">시스템 구성도</h3>
       
-      <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; margin-top: 10px;">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="객실관리 시스템 구성도" style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;">
-        <h4 style="font-size: 20px; margin-bottom: 10px;">RMSSYS 통합 스마트 객실 제어 솔루션</h4>
-        <p style="color: var(--text-normal); font-size: 15px; line-height: 1.6;">
-          월패드, 호텔락, 모바일 기기를 연동하여 언제 어디서나 안전하고 편리하게 객실을 관리할 수 있습니다.<br>
-          설치 환경과 규모에 맞춰 맞춤형 구성이 가능합니다.
+      <!-- GARAM System -->
+      <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px;">
+        <div style="display: flex; align-items: center; margin-bottom: 25px;">
+          <div style="background: var(--primary); color: white; padding: 5px 15px; border-radius: 20px; font-weight: 700; margin-right: 15px;">GARAM</div>
+          <h4 style="font-size: 22px; margin: 0; color: var(--text-dark);">객실내부 시스템 구성도 (주문형)</h4>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 20px;">
+          <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary);">
+            <h5 style="margin-top: 0; color: var(--primary);">프론트 데스크</h5>
+            <p style="font-size: 14px; margin-bottom: 0;">PMS 연동, 카드키 발행기, 키오스크 통합 관리</p>
+          </div>
+          <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary);">
+            <h5 style="margin-top: 0; color: var(--primary);">객실 내부</h5>
+            <p style="font-size: 14px; margin-bottom: 0;">스마트 월패드, 조명/온도 통합 제어, 도어락 실시간 상태 전송</p>
+          </div>
+          <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary);">
+            <h5 style="margin-top: 0; color: var(--primary);">중앙 관제</h5>
+            <p style="font-size: 14px; margin-bottom: 0;">에너지 절감 모니터링, 재실 현황 파악, 설비 제어</p>
+          </div>
+        </div>
+        <p style="color: var(--text-normal); font-size: 15px; line-height: 1.8;">
+          호텔의 아이덴티티와 운영 방식에 맞춘 <strong>주문형 솔루션</strong>입니다. 프론트, 객실, 방재실 등 각 위치에 적합한 전용 제품을 제안하여 최상의 투숙 경험과 운영 효율성을 동시에 제공합니다.
         </p>
+      </div>
+
+      <!-- SEEREAL System -->
+      <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <div style="display: flex; align-items: center; margin-bottom: 25px;">
+          <div style="background: #34495e; color: white; padding: 5px 15px; border-radius: 20px; font-weight: 700; margin-right: 15px;">SEEREAL</div>
+          <h4 style="font-size: 22px; margin: 0; color: var(--text-dark);">전체 시스템 구성도 (기본형)</h4>
+        </div>
+        <div style="border: 1px dashed #ccc; padding: 30px; border-radius: 8px; margin-bottom: 20px; background-color: #fafafa;">
+          <div style="text-align: center; color: #7f8c8d; font-style: italic;">
+            [ 시스템 연결 구조도 시각화 섹션 ]<br>
+            PMS <-> KIOSK <-> 통합 제어기 <-> 객실 디바이스
+          </div>
+        </div>
+        <p style="color: var(--text-normal); font-size: 15px; line-height: 1.8;">
+          필수적인 핵심 기능을 중심으로 설계된 <strong>기본형 솔루션</strong>입니다. 합리적인 도입 비용으로 조명/온도 제어, 모바일 카드키 연동 등 현대적인 객실 서비스를 구현할 수 있습니다.
+        </p>
+        <ul style="font-size: 14px; color: #666; padding-left: 20px; margin-top: 15px;">
+          <li>주요 연동 PMS: 산하정보기술, 오페라, 루넷, 다올비전 등</li>
+          <li>주요 연동 KIOSK: 야놀자, 밴디트, 리테크 등</li>
+        </ul>
       </div>
     </section>
   </main>
