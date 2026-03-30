@@ -18,6 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Hero Slider Logic
+  const slides = document.querySelectorAll('.hero-slide');
+  if (slides.length > 0) {
+    let currentSlide = 0;
+    const slideInterval = setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 5000); // 5 seconds
+  }
+
   // Product Click Event -> Redirect to Detail Page
   document.querySelectorAll('.post-item').forEach(item => {
     item.style.cursor = 'pointer';
