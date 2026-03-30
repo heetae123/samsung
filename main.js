@@ -18,15 +18,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Hero Slider Logic
+  // Hero Slider Logic - Enhanced
   const slides = document.querySelectorAll('.hero-slide');
-  if (slides.length > 0) {
+  if (slides.length > 1) {
     let currentSlide = 0;
-    const slideInterval = setInterval(() => {
+    
+    function nextSlide() {
+      // Current slide fade out
       slides[currentSlide].classList.remove('active');
+      
+      // Calculate next index
       currentSlide = (currentSlide + 1) % slides.length;
+      
+      // Next slide fade in
       slides[currentSlide].classList.add('active');
-    }, 5000); // 5 seconds
+    }
+
+    // Set interval for automatic slide
+    setInterval(nextSlide, 5000); // 5 seconds
   }
 
   // Product Click Event -> Redirect to Detail Page
