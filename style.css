@@ -87,7 +87,7 @@ nav.gnb ul {
 }
 
 nav.gnb ul li a {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--text-dark);
   position: relative;
