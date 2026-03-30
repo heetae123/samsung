@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>커뮤니티 | SAMSUNG Systec</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Social Sidebar -->
+  <div class="floating-sidebar">
+    <a href="#" class="f-ko"><i class="fa-solid fa-k"></i></a>
+    <a href="#" class="f-fb"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#" class="f-tw"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#" class="f-rss"><i class="fa-solid fa-rss"></i></a>
+    <a href="#" class="f-link"><i class="fa-solid fa-link"></i></a>
+  </div>
+
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-shield-halved"></i> <span>SAMSUNG</span> Systec
+      </a>
+      <nav class="gnb">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="contact.html">회사소개</a></li>
+          <li><a href="room.html">객실관리시스템</a></li>
+          <li><a href="cctv.html">CCTV시스템</a></li>
+          <li><a href="portfolio.html">포트폴리오</a></li>
+          <li><a href="community.html" class="active">커뮤니티</a></li>
+          <li><a href="support.html">고객지원</a></li>
+        </ul>
+      </nav>
+      <div class="header-util">
+        <a href="login.html" class="login-btn">
+          <i class="fa-solid fa-right-to-bracket"></i> 로그인
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sub Header Banner -->
+  <div class="sub-header">
+    <div class="sub-header-content">
+      <h1>커뮤니티</h1>
+      <div class="breadcrumb">HOME > 커뮤니티</div>
+    </div>
+  </div>
+
+  <main class="container sub-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>고객센터</h2>
+      <ul class="side-nav">
+        <li><a href="#" class="active">공지사항</a></li>
+        <li><a href="#">이벤트 (0)</a></li>
+        <li><a href="#">보도자료 (0)</a></li>
+      </ul>
+    </aside>
+
+    <!-- Content -->
+    <section class="sub-content">
+      <!-- Board List -->
+      <h3 style="margin-bottom:20px; font-size:22px; color:var(--text-dark);">공지사항</h3>
+      <table class="board-table">
+        <colgroup>
+          <col width="8%">
+          <col width="*">
+          <col width="15%">
+          <col width="15%">
+          <col width="10%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>날짜</th>
+            <th>조회수</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>3</td>
+            <td class="subject"><a href="#" style="font-weight:700;"><span style="color:#e74c3c;">[알림]</span> 홈페이지 리뉴얼 오픈 안내</a></td>
+            <td>관리자</td>
+            <td>2024-03-30</td>
+            <td>142</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td class="subject"><a href="#">시스템 점검으로 인한 서비스 일시 중단 안내</a></td>
+            <td>관리자</td>
+            <td>2024-03-15</td>
+            <td>312</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="subject"><a href="#">원격지원 서비스 프로그램 다운로드</a></td>
+            <td>관리자</td>
+            <td>2023-11-20</td>
+            <td>958</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Search Box inside Board -->
+      <div style="margin-top:30px; display:flex; justify-content:center; gap:10px;">
+        <select style="padding:10px; border:1px solid var(--border-color); border-radius:6px; outline:none;">
+          <option>제목+내용</option>
+          <option>제목</option>
+          <option>내용</option>
+        </select>
+        <input type="text" placeholder="검색어를 입력하세요" style="padding:10px 15px; border:1px solid var(--border-color); border-radius:6px; outline:none; width:300px;">
+        <button class="btn-primary" style="width:auto; padding:10px 20px;">검색</button>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <h4>공지사항</h4>
+          <ul>
+            <li><a href="#">시스템 점검 안내 (04.01)</a></li>
+            <li><a href="#">무상 A/S 기간 안내</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>COMPANY INFO</h4>
+          <div class="footer-info">
+            <p><i class="fa-solid fa-house"></i> 부산광역시 강서구 명지국제8로 10번길 46</p>
+            <p><i class="fa-solid fa-phone"></i> 050-5829-7001</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright 2024 SAMSUNG SYSTEC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
