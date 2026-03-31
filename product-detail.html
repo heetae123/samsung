@@ -201,10 +201,12 @@
       document.getElementById('pFullDesc').textContent = data.desc;
       document.getElementById('pVideo').src = `https://www.youtube.com/embed/${data.video}`;
 
+      // Video Lock Removal - Always show video
+      document.getElementById('manualLock').style.display = 'none';
+
       // Login Logic UI
       const memberArea = document.getElementById('memberPriceArea');
       const actionArea = document.getElementById('actionBtnArea');
-      const manualLock = document.getElementById('manualLock');
 
       if (isLoggedIn) {
         memberArea.innerHTML = `
@@ -218,13 +220,11 @@
         actionArea.innerHTML = `
           <a href="quote.html?product=${encodeURIComponent(data.title)}" class="btn-quote" style="width: 100%;">실시간 견적 문의하기</a>
         `;
-        
-        manualLock.style.display = 'none';
       } else {
         memberArea.innerHTML = `
           <div class="price-row">
             <span class="price-label">회원 할인가</span>
-            <span class="price-value" style="filter: blur(5px);">9,999,999원</span>
+            <span class="price-value" style="filter: blur(5px); user-select: none;">9,999,999원</span>
           </div>
           <div class="login-lock-msg">
             <i class="fa-solid fa-circle-info"></i> 로그인을 하시면 회원 할인가와 상세 혜택을 확인하실 수 있습니다.
@@ -234,8 +234,6 @@
         actionArea.innerHTML = `
           <a href="login.html" class="btn-buy" style="width: 100%;">로그인 후 견적 문의 가능</a>
         `;
-
-        manualLock.style.display = 'flex';
       }
     });
   </script>
