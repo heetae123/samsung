@@ -36,7 +36,7 @@
       </a>
       <p>서비스 이용을 위해 로그인을 해주세요.</p>
       
-      <form action="index.html">
+      <form id="loginForm">
         <div class="form-group">
           <input type="text" placeholder="아이디(이메일)" required>
         </div>
@@ -55,5 +55,14 @@
   </div>
 
   <script src="main.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // 가상 로그인 성공 처리
+      localStorage.setItem('isLoggedIn', 'true');
+      alert('성공적으로 로그인되었습니다.');
+      location.href = 'index.html';
+    });
+  </script>
 </body>
 </html>
