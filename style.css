@@ -204,41 +204,34 @@ nav.gnb ul li a.active {
   transform: scale(1);
 }
 
-.hero-nav {
+.hero-pagination {
   position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  transform: translateY(-50%);
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: space-between;
-  padding: 0 40px;
+  gap: 15px;
   z-index: 100;
-  pointer-events: none;
 }
 
-.hero-nav-btn {
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+.hero-pagination .dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   transition: var(--transition);
-  pointer-events: auto;
-  font-size: 18px;
+  border: 2px solid transparent;
 }
 
-.hero-nav-btn:hover {
+.hero-pagination .dot.active {
   background: var(--primary);
-  border-color: var(--primary);
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(70, 181, 217, 0.4);
+  transform: scale(1.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-pagination .dot:hover {
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .hero-bg {
