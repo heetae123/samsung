@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실시간 견적 문의 | SAMSUNG Systec</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .quote-container { max-width: 800px; margin: 60px auto; background: white; padding: 50px; border-radius: 20px; box-shadow: var(--shadow-lg); }
+    .quote-header { text-align: center; margin-bottom: 40px; }
+    .quote-header h1 { font-size: 32px; color: var(--text-dark); margin-bottom: 10px; }
+    .quote-header p { color: #666; }
+    
+    .form-section { margin-bottom: 30px; }
+    .form-section h3 { font-size: 18px; color: var(--primary); margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+    
+    .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .input-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 15px; }
+    .input-group.full { grid-column: span 2; }
+    .input-group label { font-weight: 600; font-size: 14px; color: #333; }
+    .input-group input, .input-group select, .input-group textarea { padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 15px; transition: 0.3s; }
+    .input-group input:focus, .input-group textarea:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 3px rgba(70,181,217,0.1); }
+    
+    .btn-submit { width: 100%; padding: 18px; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: 700; cursor: pointer; transition: 0.3s; margin-top: 20px; }
+    .btn-submit:hover { background: var(--primary-hover); transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-shield-halved"></i> <span>SAMSUNG</span> Systec
+      </a>
+      <nav class="gnb">
+        <ul>
+          <li><a href="contact.html">회사소개</a></li>
+          <li><a href="room.html">객실관리시스템</a></li>
+          <li><a href="cctv.html">CCTV시스템</a></li>
+          <li><a href="portfolio.html">포트폴리오</a></li>
+          <li><a href="community.html">커뮤니티</a></li>
+          <li><a href="support.html">고객지원</a></li>
+        </ul>
+      </nav>
+      <div class="header-util">
+        <a href="login.html" class="login-btn">
+          <i class="fa-solid fa-right-to-bracket"></i> 로그인
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="quote-container">
+    <div class="quote-header">
+      <h1><i class="fa-solid fa-file-invoice-dollar"></i> 실시간 견적 문의</h1>
+      <p>필요하신 시스템 정보를 입력해 주시면 전문 상담원이 신속히 연락드립니다.</p>
+    </div>
+
+    <form id="quoteForm">
+      <!-- Product Info -->
+      <div class="form-section">
+        <h3>1. 문의 제품 정보</h3>
+        <div class="input-group full">
+          <label>선택 제품</label>
+          <input type="text" id="targetProduct" readonly style="background: #f8f9fa; font-weight: 700; color: var(--primary);">
+        </div>
+      </div>
+
+      <!-- Company Info -->
+      <div class="form-section">
+        <h3>2. 신청인 정보</h3>
+        <div class="input-grid">
+          <div class="input-group">
+            <label>업체명 / 호텔명</label>
+            <input type="text" placeholder="예: 삼성호텔" required>
+          </div>
+          <div class="input-group">
+            <label>담당자 성함</label>
+            <input type="text" placeholder="예: 홍길동" required>
+          </div>
+          <div class="input-group">
+            <label>연락처</label>
+            <input type="tel" placeholder="예: 010-1234-5678" required>
+          </div>
+          <div class="input-group">
+            <label>이메일</label>
+            <input type="email" placeholder="example@email.com" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Request Details -->
+      <div class="form-section">
+        <h3>3. 요청 상세 내용</h3>
+        <div class="input-grid">
+          <div class="input-group">
+            <label>설치 지역</label>
+            <select required>
+              <option value="">지역 선택</option>
+              <option value="서울">서울/경기</option>
+              <option value="부산">부산/경남</option>
+              <option value="대구">대구/경북</option>
+              <option value="강원">강원</option>
+              <option value="제주">제주</option>
+              <option value="기타">기타</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>예상 객실 수 / 수량</label>
+            <input type="number" placeholder="예: 50" required>
+          </div>
+          <div class="input-group full">
+            <label>추가 요청사항</label>
+            <textarea rows="5" placeholder="시스템 도입 목적, 특별 요구사항 등을 자유롭게 적어주세요."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit">견적 요청 제출하기</button>
+    </form>
+  </main>
+
+  <footer style="margin-top: 100px;">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>Copyright 2024 SAMSUNG SYSTEC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // URL 파라미터에서 제품명 가져오기
+      const params = new URLSearchParams(window.location.search);
+      const productName = params.get('product') || '시스템 통합 문의';
+      document.getElementById('targetProduct').value = productName;
+
+      // 폼 제출 이벤트
+      document.getElementById('quoteForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('견적 요청이 성공적으로 접수되었습니다. 담당자가 곧 연락드리겠습니다.');
+        window.location.href = 'index.html';
+      });
+
+      // 로그인 체크 (견적 페이지는 로그인 필수)
+      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      if (!isLoggedIn) {
+        alert('견적 문의는 로그인 후 이용 가능합니다.');
+        window.location.href = 'login.html';
+      }
+    });
+  </script>
+</body>
+</html>

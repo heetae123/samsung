@@ -216,8 +216,7 @@
         `;
 
         actionArea.innerHTML = `
-          <a href="#" class="btn-buy" onclick="alert('준비 중인 기능입니다.')">바로 구매</a>
-          <a href="contact.html?subject=${encodeURIComponent(data.title + ' 견적 문의')}" class="btn-quote">실시간 견적 문의</a>
+          <a href="quote.html?product=${encodeURIComponent(data.title)}" class="btn-quote" style="width: 100%;">실시간 견적 문의하기</a>
         `;
         
         manualLock.style.display = 'none';
@@ -233,8 +232,7 @@
         `;
 
         actionArea.innerHTML = `
-          <a href="login.html" class="btn-buy">로그인 후 구매</a>
-          <div class="btn-locked"><i class="fa-solid fa-lock"></i> 견적 문의 (로그인 필요)</div>
+          <a href="login.html" class="btn-buy" style="width: 100%;">로그인 후 견적 문의 가능</a>
         `;
 
         manualLock.style.display = 'flex';
