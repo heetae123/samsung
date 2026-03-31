@@ -18,24 +18,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Hero Slider Logic - Enhanced
+  // Hero Slider Logic - Enhanced with Manual Controls
   const slides = document.querySelectorAll('.hero-slide');
+  const prevBtn = document.querySelector('.hero-nav-btn.prev');
+  const nextBtn = document.querySelector('.hero-nav-btn.next');
+  
   if (slides.length > 1) {
     let currentSlide = 0;
-    
-    function nextSlide() {
-      // Current slide fade out
+    let slideInterval;
+
+    function showSlide(index) {
       slides[currentSlide].classList.remove('active');
-      
-      // Calculate next index
-      currentSlide = (currentSlide + 1) % slides.length;
-      
-      // Next slide fade in
+      currentSlide = (index + slides.length) % slides.length;
       slides[currentSlide].classList.add('active');
     }
 
-    // Set interval for automatic slide
-    setInterval(nextSlide, 5000); // 5 seconds
+    function startAutoSlide() {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(() => {
+        showSlide(currentSlide + 1);
+      }, 6000);
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        showSlide(currentSlide + 1);
+        startAutoSlide(); // Reset timer
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        showSlide(currentSlide - 1);
+        startAutoSlide(); // Reset timer
+      });
+    }
+
+    startAutoSlide();
   }
 
   // Product Click Event -> Redirect to Detail Page
